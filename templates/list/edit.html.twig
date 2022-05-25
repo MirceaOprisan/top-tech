@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Company{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="card-body">
+            {% if app.user != null %}
+                {{ form_start(form) }}
+                {{ form_widget(form) }}
+                {{ form_end(form) }}
+            {%endif%}
+            <hr>
+            <a href="/list">Go Back</a>
+        </div>
+
+        {% if app.user == null %}
+            <a href="{{ path('app_login') }}" class="btn btn-info"> You need to login to edit a company</a>
+        {% endif %}
+
+
+
+    </div>
+
+
+{% endblock %}

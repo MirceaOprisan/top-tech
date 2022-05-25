@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ company.title }}{% endblock %}
+
+{% block body %}
+    <div class="card-body">
+    <h1>{{ company.title }}</h1>
+    <p>{{ company.marketvalue }}</p>
+{#        {{ dump(_context) }}#}
+    <hr>
+    <a href="/list">Go Back</a>
+    </div>
+{% endblock %}
